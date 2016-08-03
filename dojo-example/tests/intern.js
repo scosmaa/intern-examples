@@ -15,14 +15,19 @@ define({
 	// Note that the `build` capability will be filled in with the current commit ID from the Travis CI environment
 	// automatically
 	capabilities: {
-		'selenium-version': '2.45.0'
+		'selenium-version': '2.53.1'
 	},
 
 	// Browsers to run integration testing against. Note that version numbers must be strings if used with Sauce
 	// OnDemand. Options that will be permutated are browserName, version, platform, and platformVersion; any other
 	// capabilities options specified for an environment will be copied as-is
 	environments: [
-		{ browserName: 'firefox' },
+		{ browserName: 'firefox' }
+		// { browserName: 'chrome' },
+		// { browserName: 'internet explorer',
+		// 	'ie.ensureCleanSession': true
+		// },
+		// { browserName: 'MicrosoftEdge' },
 		/*
 		// Uncomment these for more testing!
 		{ browserName: 'internet explorer', version: '10', platform: 'Windows 8' },
@@ -36,7 +41,7 @@ define({
 	//tunnel: 'SauceLabsTunnel',
 
 	// Maximum number of simultaneous integration tests that should be executed on the remote WebDriver service
-	maxConcurrency: 3,
+	maxConcurrency: 4,
 
 	// Configuration options for the module loader; any AMD configuration options supported by the Dojo loader can be
 	// used here
